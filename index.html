@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/favicon.ico">
+  <title>KTCF index</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #202020;
+      display: flex;
+    }
+
+    * {
+      color: #F0F0F0;
+      font-size: 40px;
+    }
+
+    #pieces {
+      width: 36%;
+      padding: 20px;
+    }
+
+    .piece {
+      position: absolute;
+    }
+
+    .piece:nth-child(2) {
+      left: 270px;
+    }
+
+    .piece:nth-child(3) {
+      top: 270px;
+    }
+
+    .piece:nth-child(4) {
+      left: 270px;
+      top: 270px;
+    }
+
+    #divs {
+      flex: 1;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    #divs div {
+      border: solid 3px #F0F0F0;
+      padding: 5px 10px;
+      height: calc(25% - 40px);
+      width: calc(50% - 40px);
+    }
+
+    #clock {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+
+    #forceEnd {
+      position: absolute;
+      bottom: 20px;
+      left: 240px;
+    }
+
+    button {
+      width: 240px;
+      height: 110px;
+      border: solid #FF7C21;
+      background-color: #292929;
+      color: #F0F0F0;
+    }
+
+    button:hover,
+    button.hovered {
+      color: #FF7C21;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div id="pieces">
+    <img class="piece" src="images/hujiwara.png"></img>
+    <img class="piece" src="images/kobayashi.png"></img>
+    <img class="piece" src="images/mori.png"></img>
+    <img class="piece" src="images/yanagisawa.png"></img>
+  </div>
+
+  <div id="divs">
+    <div class="menu">ハンバーグ</div>
+    <div class="menu">サバ味噌</div>
+    <div class="menu">サバ塩</div>
+    <div class="menu">シーフードフライ</div>
+    <div class="menu">生姜焼き</div>
+    <div class="menu">幕ノ内</div>
+    <div class="menu">洋風</div>
+    <div class="menu">メンチ</div>
+  </div>
+
+  <span id="clock"></span>
+  <button id="forceEnd">終了</button>
+
+  <!-- ================ script ================ -->
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript" src="/lib/jquery_3.6.0.js"></script>
+  <script type="text/javascript" src="/lib/ktcf.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>
